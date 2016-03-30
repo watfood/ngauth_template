@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="authtemplate">
+<head>
+  <title>Auth App</title>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+  <!-- if you must use outside libs that aren't Angular-specific, include them BEFORE Angular -->
+  <script src="/js/jwt-decode.2.0.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+                <button ui-sref="signin" type="button" class="btn btn-primary navbar-btn navbar-right">Sign In</button>
+                <button ui-sref="welcome"type="button" class="btn btn-default navbar-btn navbar-left">Home</button>
+          </div>
+        </nav>
+
+    </header>
+
+    <main class="content" ui-view>
+      <!--- ui-router aka ui.router -->
+    </main>
+  </div> <!-- div.container-fluid -->
+
+
+  <footer>
+    <hr>
+    <span>Made with <i class="glyphicon glyphicon-heart"></i> in DTLA.</span>
+    <br>
+    <span>© 2015, WDI</span>
+  </footer>
+
+  <script src="/js/app_module.js"></script>
+  <script src="/js/app_routes.js"></script>
+  <script src="/js/token_service.js"></script>
+  <script src="/js/sign_in_controller.js"></script>
+
+</body>
+</html>
